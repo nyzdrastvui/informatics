@@ -8,9 +8,9 @@ shir = tryparse(Float64, shir );
 
 dlina = tryparse(Float64, dlina);
 
-s = shir * dlina;
-p = (shir * 2) + (dlina * 2);
-d = sqrt((shir ^ 2) + (dlina ^ 2));
+sqare = shir * dlina;
+perimetr = (shir * 2) + (dlina * 2);
+diametr = sqrt((shir ^ 2) + (dlina ^ 2));
 
 println("p = $p");
 println("s = $s");
