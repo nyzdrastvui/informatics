@@ -12,6 +12,6 @@ sqare = shir * dlina;
 perimetr = (shir * 2) + (dlina * 2);
 diametr = sqrt((shir ^ 2) + (dlina ^ 2));
 
-println("p = $p");
-println("s = $s");
-println("d = $d");
+println("p = $perimetr");
+println("s = $sqare");
+println("d = $diametr");
