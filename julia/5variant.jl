@@ -11,7 +11,7 @@ dlina = tryparse(Float64, dlina);
 sqare = shir * dlina;
 perimetr = (shir * 2) + (dlina * 2);
 diametr = sqrt((shir ^ 2) + (dlina ^ 2));
-
+#коммент
 println("p = $perimetr");
 println("s = $sqare");
 println("d = $diametr");
