@@ -1,17 +1,35 @@
-println("Введите значение ширина: ");
-width_str = readline();
+println("""Выберите одно из действий:
+1-вычислить периметр 
+2-вычислить площадь 
+3-вычислить диаметр 
+0 - выход""")
 
-println("Введите значение длина: ");
-length_str = readline();
+choice = readline();
 
-width = tryparse(Float64, width_str);
+if choice != "0"
+    println("Введите значение ширина: ");
+    width_str = readline();
 
-length = tryparse(Float64, length_str);
+    println("Введите значение длина: ");
+    length_str = readline();
 
-sqare = width * length;
-perimeter = (width * 2) + (length * 2);
-diameter = sqrt((width ^ 2) + (length ^ 2));
+    width = tryparse(Float64, width_str);
 
-println("perimeter = $perimeter");
-println("sqare = $sqare");
-println("diameter = $diameter"); 
+    length = tryparse(Float64, length_str);
+else
+    exit()
+end
+
+if choice == "1"
+    perimeter = (width * 2) + (length * 2);
+    println("perimeter = $perimeter");
+elseif choice == "2"
+    sqare = width * length;
+    println("sqare = $sqare");
+elseif choice == "3"
+    diameter = sqrt((width ^ 2) + (length ^ 2));
+    println("diameter = $diameter");
+else
+    println("Введено некорректное значение");
+end
+
