@@ -1,17 +1,17 @@
 println("Введите значение ширина: ");
-shir = readline();
+width_str = readline();
 
 println("Введите значение длина: ");
-dlina = readline();
+length_str = readline();
 
-shir = tryparse(Float64, shir );
+width = tryparse(Float64, width_str);
 
-dlina = tryparse(Float64, dlina);
+length = tryparse(Float64, length_str);
 
-sqare = shir * dlina;
-perimetr = (shir * 2) + (dlina * 2);
-diametr = sqrt((shir ^ 2) + (dlina ^ 2));
-#коммент
-println("p = $perimetr");
-println("s = $sqare");
-println("d = $diametr");
+sqare = width * length;
+perimeter = (width * 2) + (length * 2);
+diameter = sqrt((width ^ 2) + (length ^ 2));
+
+println("perimeter = $perimeter");
+println("sqare = $sqare");
+println("diameter = $diameter");
