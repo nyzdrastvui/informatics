@@ -14,4 +14,6 @@ diameter = sqrt((width ^ 2) + (length ^ 2));
 
 println("perimeter = $perimeter");
 println("sqare = $sqare");
+println("diameter = $diameter"); 
+=======
 println("diameter = $diameter");
