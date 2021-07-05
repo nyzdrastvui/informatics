@@ -1,17 +1,40 @@
-println("Введите значение ширина: ");
-shir = readline();
+@enum Choices периметр=1 диаметр=2 площадь=3;
 
-println("Введите значение длина: ");
-dlina = readline();
+println("Выберите одно из действий:");
+println("1 - вычислить " ,Choices(1));
+println("2 - вычислить " ,Choices(2));
+println("3 - вычислить " ,Choices(3));
+println("0 - выход");
 
-shir = tryparse(Float64, shir );
+choice = readline();
 
-dlina = tryparse(Float64, dlina);
+if choice != "0"
+    println("Введите значение ширина: ");
+    width_str = readline();
 
-sqare = shir * dlina;
-perimetr = (shir * 2) + (dlina * 2);
-diametr = sqrt((shir ^ 2) + (dlina ^ 2));
-#коммент
-println("p = $perimetr");
-println("s = $sqare");
-println("d = $diametr");
+    println("Введите значение длина: ");
+    length_str = readline();
+    try
+        width = tryparse(Float64, width_str);
+        length = tryparse(Float64, length_str);
+
+        if choice == "1"
+            perimeter = (width * 2) + (length * 2);
+            println("perimeter = $perimeter");
+        elseif choice == "2"
+            sqare = width * length;
+            println("sqare = $sqare");
+        elseif choice == "3"
+            diameter = sqrt((width ^ 2) + (length ^ 2));
+            println("diameter = $diameter");
+        else
+            println("Введено некорректное значение");
+        end
+    catch
+        println("Неверный ввод.Введите число");
+        exit();
+    end
+else
+    println("Неверный ввод. Выберите из предложенных вариантов");
+    exit();
+end
